@@ -1,0 +1,29 @@
+bbva-santander-predictor/
+│
+├── data/
+│   ├── raw/               # Raw CSVs downloaded from Yahoo or API
+│   ├── processed/         # Scaled, cleaned data ready for modeling
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_model_training.ipynb
+│   ├── 03_evaluation.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py     # API connection, fetch & update data
+│   ├── preprocessing.py   # Cleaning, scaling, windowing
+│   ├── model_rnn.py       # Base RNN architecture
+│   ├── model_lstm.py      # LSTM architecture (future)
+│   ├── model_gru.py       # GRU architecture (future)
+│   ├── trainer.py         # Training loop, saving model
+│   ├── predictor.py       # Loads model, makes forecasts
+│   └── utils.py           # Shared helpers, logging, plotting, etc.
+│
+├── ui/
+│   ├── dashboard.py       # Streamlit app for live visualization
+│
+├── requirements.txt
+├── config.yaml            # API keys, parameters, update schedule
+├── run_daily.py           # Script to refresh data + update model
+└── README.md
