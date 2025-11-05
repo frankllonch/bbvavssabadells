@@ -1,0 +1,25 @@
+# Ignore virtual environments
+venv/
+.env/
+bbva/
+.bbva/
+
+# Ignore data folders
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+
+# Ignore model weights
+*.h5
+*.pkl
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore local system files
+.DS_Store
